@@ -28,12 +28,12 @@ export default {
       },
       {
         title: 'Our Story',
-        icon: 'i-mdi-home',
+        icon: 'i-icon-park-outline-history',
         to: '/our-story',
       },
       {
         title: 'Contact Us',
-        icon: 'i-mdi-home',
+        icon: 'i-system-uicons-contacts',
         to: '/contact-us',
       },
     ],

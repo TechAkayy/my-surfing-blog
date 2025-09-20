@@ -43,8 +43,8 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'netlify-static',
     prerender: {
-      failOnError: false
-    }
+      failOnError: false,
+    },
   },
 
   build: {
@@ -329,7 +329,7 @@ export default defineNuxtConfig({
         // restartOnThemeUpdate: true,
       },
       wordpress: {
-        // dataPath: false, // Set to false to turn off addition of data fetching composable(s) to the project. To customize the path, set to an absolute or relative path, default is 'data/pg-wordpress/query.ts'.                
+        // dataPath: false, // Set to false to turn off addition of data fetching composable(s) to the project. To customize the path, set to an absolute or relative path, default is 'data/pg-wordpress/query.ts'.
       },
       // plugins: [
       //   {

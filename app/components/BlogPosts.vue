@@ -32,10 +32,10 @@
   /* Auto-generated logic by Vue Designer Headless Wordpress 6.7 ends */
 </script>
 <template>
-  <section class="py-16 px-4 md:px-8 bg-white">
+  <section class="py-16 px-4 md:px-8 bg-white dark:bg-neutral-950">
     <div class="max-w-6xl mx-auto">
       <h2
-        class="text-3xl md:text-4xl font-serif text-gray-800 text-center mb-12"
+        class="text-3xl md:text-4xl font-serif text-gray-800 dark:text-neutral-100 text-center mb-12"
       >
         Latest Surf Stories
       </h2>
@@ -46,7 +46,7 @@
         <article
           v-for="(pgPost, index) in pgPosts"
           :key="index"
-          class="bg-gray-50 rounded-lg overflow-hidden shadow-md"
+          class="bg-gray-50 dark:bg-neutral-900 rounded-lg overflow-hidden shadow-md"
         >
           <img
             alt="Surfing tips"
@@ -62,17 +62,19 @@
             "
           />
           <div class="p-6">
-            <p class="text-blue-600 text-sm font-sans mb-2">March 15, 2024</p>
+            <p class="text-blue-600 dark:text-blue-400 text-sm font-sans mb-2">
+              March 15, 2024
+            </p>
             <h3
-              class="text-xl font-serif text-gray-800 mb-3"
+              class="text-xl font-serif text-gray-800 dark:text-neutral-100 mb-3"
               v-html="pgPost?.title?.rendered"
             ></h3>
             <div
-              class="text-gray-600 font-sans mb-4 line-clamp-3"
+              class="text-gray-600 dark:text-gray-400 font-sans mb-4 line-clamp-3"
               v-html="pgPost?.excerpt?.rendered"
             ></div>
             <NuxtLink
-              class="text-blue-600 font-sans hover:text-blue-700 inline-flex items-center"
+              class="text-blue-600 dark:text-blue-400 font-sans hover:text-blue-700 dark:hover:text-blue-300 inline-flex items-center"
               :to="`/blog/${pgPost.slug}/${pgPost.id}`"
               >Read More <span class="ml-2">→</span>
             </NuxtLink>

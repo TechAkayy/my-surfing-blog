@@ -17,7 +17,6 @@
     icon: 'i-mdi-home',
     // ogImage: 'images/ogImage.png', // url or local images inside public folder, for eg, ~/public/images/ogImage.png
   })
-
   /* Auto-generated logic by Vue Designer Headless Wordpress 6.7 begins */
   const { getPgWordpressPost } = usePgWordpressData()
   const pgData: any = {
@@ -34,6 +33,7 @@
   }
 
   const pgPost = pgData.pgWordpressData.post.data
+
   /* Auto-generated logic by Vue Designer Headless Wordpress 6.7 ends */
 
   const capitalize = (s) => (s && s[0].toUpperCase() + s.slice(1)) || ''
@@ -57,33 +57,40 @@
           "
         />
         <div class="space-y-4">
-          <div class="flex items-center gap-4 text-gray-600">
-            <span>June 15, 2023</span><span>•</span>
+          <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
+            <span>June 15, 2023</span>
+            <span>•</span>
             <div>
-              <span>By</span>
-              <span>{{ pgPost._embedded.author?.[0]?.name }}</span>
+              <span>By</span
+              ><span>{{ pgPost._embedded.author?.[0]?.name }}</span>
             </div>
           </div>
           <h1
-            class="text-4xl md:text-5xl font-serif font-bold text-gray-900"
+            class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-white"
             v-html="pgPost?.title?.rendered"
           ></h1>
           <div class="flex flex-wrap gap-2">
             <span
-              class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+              class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-200 rounded-full text-sm"
               >Adventure</span
-            ><span
-              class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-200 rounded-full text-sm"
               >Surfing</span
-            ><span
-              class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-200 rounded-full text-sm"
               >Ocean Life</span
             >
           </div>
-          <div class="prose prose-lg text-gray-700">
+          <div
+            class="prose prose-lg text-gray-700 dark:text-gray-300 dark:prose-invert"
+          >
             <div v-html="pgPost?.content?.rendered"></div>
           </div>
-          <div class="flex items-center gap-4 pt-8 border-t border-gray-200">
+          <div
+            class="flex items-center gap-4 pt-8 border-t border-gray-200 dark:border-gray-800"
+          >
             <img
               src="https://images.unsplash.com/photo-1704784191190-a228b02fbf68?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE1fHxhdXRob3IlMjBzYXJhaHxlbnwwfHx8fDE3NTgzMjc0ODJ8MA&ixlib=rb-4.1.0q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
               alt="Sarah Waters"
@@ -91,10 +98,10 @@
             />
             <div>
               <h3
-                class="font-bold text-gray-900"
+                class="font-bold text-gray-900 dark:text-white"
                 v-html="pgPost._embedded.author?.[0]?.name"
               ></h3>
-              <p class="text-gray-600">
+              <p class="text-gray-600 dark:text-gray-400">
                 {{
                   pgPost._embedded.author?.[0]?.description ||
                   'One who loves surfing'
@@ -104,6 +111,16 @@
           </div>
         </div>
       </div>
+      <section class="bg-white mt-12 py-12 rounded-md dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4">
+          <h2
+            class="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-8"
+          >
+            Comments
+          </h2>
+          <PostComment :id="String(route.params.id)" />
+        </div>
+      </section>
     </article>
   </div>
 </template>
