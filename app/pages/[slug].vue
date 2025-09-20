@@ -66,7 +66,7 @@
           </div>
           <h1
             class="text-4xl md:text-5xl font-serif font-bold text-gray-900"
-            v-html="pgPost.title.rendered"
+            v-html="pgPost?.title?.rendered"
           ></h1>
           <div class="flex flex-wrap gap-2">
             <span
@@ -81,7 +81,7 @@
             >
           </div>
           <div class="prose prose-lg text-gray-700">
-            <div v-html="pgPost.content.rendered"></div>
+            <div v-html="pgPost?.content?.rendered"></div>
           </div>
           <div class="flex items-center gap-4 pt-8 border-t border-gray-200">
             <img

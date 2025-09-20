@@ -65,11 +65,11 @@
             <p class="text-blue-600 text-sm font-sans mb-2">March 15, 2024</p>
             <h3
               class="text-xl font-serif text-gray-800 mb-3"
-              v-html="pgPost.title.rendered"
+              v-html="pgPost?.title?.rendered"
             ></h3>
             <div
               class="text-gray-600 font-sans mb-4 line-clamp-3"
-              v-html="pgPost.excerpt.rendered"
+              v-html="pgPost?.excerpt?.rendered"
             ></div>
             <NuxtLink
               class="text-blue-600 font-sans hover:text-blue-700 inline-flex items-center"
