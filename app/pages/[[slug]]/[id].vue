@@ -25,7 +25,7 @@
   }
 
   const pgPostArgs = {
-    post: { filters: { id: route.query.id, _embed: 'true' } },
+    post: { filters: { id: route.params.id, _embed: 'true' } },
   }
 
   pgData.pgWordpressData.post = {
@@ -52,7 +52,7 @@
           alt="Surfing the Perfect Wave"
           class="w-full h-[500px] object-cover rounded-lg shadow-lg"
           :src="
-            pgPost?._embedded?.['wp:featuredmedia']?.[0]?.source_url ||
+            pgPost._embedded['wp:featuredmedia']?.[0]?.source_url ||
             'https://images.unsplash.com/photo-1633297345330-261df10cf6a6?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fHN1cmZpbmclMjBoZXJvfGVufDB8fHx8MTc1ODMyNTA1MXww&ixlib=rb-4.1.0q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop'
           "
         />
@@ -61,7 +61,7 @@
             <span>June 15, 2023</span><span>•</span>
             <div>
               <span>By</span>
-              <span>{{ pgPost?._embedded?.author?.[0]?.name }}</span>
+              <span>{{ pgPost._embedded.author?.[0]?.name }}</span>
             </div>
           </div>
           <h1
@@ -92,11 +92,11 @@
             <div>
               <h3
                 class="font-bold text-gray-900"
-                v-html="pgPost?._embedded?.author?.[0]?.name"
+                v-html="pgPost._embedded.author?.[0]?.name"
               ></h3>
               <p class="text-gray-600">
                 {{
-                  pgPost?._embedded?.author?.[0]?.description ||
+                  pgPost._embedded.author?.[0]?.description ||
                   'One who loves surfing'
                 }}
               </p>
