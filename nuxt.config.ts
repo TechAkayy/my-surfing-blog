@@ -42,6 +42,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'netlify-static',
+    prerender: {
+      failOnError: false
+    }
   },
 
   build: {

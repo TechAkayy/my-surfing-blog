@@ -73,10 +73,7 @@
             ></div>
             <NuxtLink
               class="text-blue-600 font-sans hover:text-blue-700 inline-flex items-center"
-              :to="{
-                name: 'slug-id',
-                params: { slug: pgPost.slug, id: pgPost.id },
-              }"
+              :to="`/blog/${pgPost.slug}/${pgPost.id}`"
               >Read More <span class="ml-2">→</span>
             </NuxtLink>
           </div>
