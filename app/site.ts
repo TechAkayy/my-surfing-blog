@@ -5,7 +5,7 @@
 export default {
   title: 'Vue Designer',
   description: 'Vue Designer Nuxt Tailwind CSS - Quick start template',
-  logo: 'i-vscode-icons:file-type-coffeelint',
+  logo: 'i-twemoji-person-surfing',
   author: 'Pinegrow',
   url: 'https://pg-nuxt-tailwindcss.netlify.app',
   github: 'https://github.com/pinegrow/pg-nuxt-tailwindcss',
@@ -25,6 +25,16 @@ export default {
         title: 'Home',
         icon: 'i-mdi-home',
         to: '/',
+      },
+      {
+        title: 'Our Story',
+        icon: 'i-mdi-home',
+        to: '/our-story',
+      },
+      {
+        title: 'Contact Us',
+        icon: 'i-mdi-home',
+        to: '/contact-us',
       },
     ],
     secondary: [
