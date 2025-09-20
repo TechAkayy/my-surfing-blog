@@ -60,7 +60,8 @@
           <div class="flex items-center gap-4 text-gray-600">
             <span>June 15, 2023</span><span>•</span>
             <div>
-              <span>By</span> <span>{{ pgPost._embedded.author[0].name }}</span>
+              <span>By</span>
+              <span>{{ pgPost?._embedded?.author?.[0]?.name }}</span>
             </div>
           </div>
           <h1
@@ -91,11 +92,11 @@
             <div>
               <h3
                 class="font-bold text-gray-900"
-                v-html="pgPost._embedded.author[0].name"
+                v-html="pgPost?._embedded?.author?.[0]?.name"
               ></h3>
               <p class="text-gray-600">
                 {{
-                  pgPost._embedded.author[0].description ||
+                  pgPost?._embedded?.author?.[0]?.description ||
                   'One who loves surfing'
                 }}
               </p>
